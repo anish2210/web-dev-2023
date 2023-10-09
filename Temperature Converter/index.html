@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div class = "home" id = "home">
+        <div class = "intro">
+            <h1>Temperature Converter!!</h1>
+        </div>
+        <div class = "obj">
+            <div class = "container" id = "container">
+                <h2>Convert to Fahrenheit</h2>
+                <input type = "button" value = "Convert Now!" class = "con" id = "con" onclick="sv('home','none');sv('farh','flex')">
+            </div>
+            <div class = "container" id = "container">
+                <h2>Convert to Celsius</h2>
+                <input type = "button" value = "Convert Now!" class = "con" id = "con" onclick="sv('home','none');sv('Celsius','flex')">
+            </div>
+        </div>
+    </div>
+    <div class = "Celsius" id = "Celsius">
+        <div class = "intro2">
+            <h1>Convert to Celsius!!</h1>
+        </div>
+        <div class = "obj1">
+            <div class = "container" id = "container">
+                <h2>Enter Temperature in Fahrenheit</h2>
+                <input type = "number" placeholder="Temp" id = "degree">
+                <input type = "button" value = "Convert Now!" class = "but" id = "but">
+                <h3>Result: </h3>
+                <div class = "result">
+                    <h2 class = "resultvalue" id = "resultvalue">55</h2>
+                </div>
+                <br>
+                <input type = "button" value = "Back" class = "but2" onclick="sv('home','flex');sv('Celsius','none')">
+            </div>
+        </div>
+    </div>
+    <div class = "farh" id = "farh">
+        <div class = "intro1">
+            <h1>Convert to Fahrenheit!!</h1>
+        </div>
+        <div class = "obj1">
+            <div class = "container" id = "container">
+                <h2>Enter Temperature in Celsius</h2>
+                <input type = "number" placeholder="Temp" id = "degree1">
+                <input type = "button" value = "Convert Now!" class = "but1" id = "but1">
+                <h3>Result: </h3>
+                <div class = "result">
+                    <h2 class = "resultvalue1" id = "resultvalue1"></h2>
+                </div>
+                <br>
+                <input type = "button" value = "Back" class = "but2" onclick="sv('home','flex');sv('farh','none')">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src = "script.js"></script>
+</body>
+</html>
