@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://static.meeshosupply.com/web/meesho-logo-fav.png">
+    <link rel="stylesheet" href="./css/homePage.css">
+    <title>Mens Wear : Top Wear for Men Online at Best Price | Meesho</title>
+    <link rel="stylesheet" href="./css/productpage.css">
+    <link rel="stylesheet" href="./css/search.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <section class="navbar">
+      <div class="uppernav">
+        <a href="index.html"><img
+          src="https://cdn.hevodata.com/customer/logo/8c76f62bd88177a78bb6e2810a244446.png"
+          alt="logo"
+          class="logo"
+        /></a>
+        <div class="navSearch">
+          <img
+            src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png"
+            alt="search"
+            class="NavSearchIcon"
+          />
+          <input
+            type="text"
+            id="keyword"
+            class="searchContainer"
+            placeholder="Try Saree,Kurthi or Seach by Product Code"
+            onkeypress="handleKeyPress(event)"
+          />
+        </div>
+        <div class="navRightSec">
+          <div class="navAppPromo">
+            <img
+              src="https://i.postimg.cc/sXqr2Fz4/smartphone.png"
+              alt="app"
+              class="navAppIcon"
+            />
+            <span id="tagDwn">Download App</span>
+          </div>
+          <span class="navSuplier">Become a Supplier</span>
+          <div class="navProfile" onclick="window.location.href='SignUpPage.html'">
+            <img
+              src="https://i.postimg.cc/wjtLkcVz/user.png"
+              alt="account"
+              class="navAccountIcon"
+            />
+            <span
+              class="SignUpHover"
+              >Profile</span
+            >
+          </div>
+          <div class="navcart" onclick="window.location.href='CartPage.html'">
+            <img
+              src="https://i.postimg.cc/sXBgkwMf/bag.png"
+              alt="cart"
+              class="cartIcon"
+            />
+            <span
+              class="SignUpHover"
+              onclick="window.location.href='CartPage.html'"
+              >Cart</span
+            >
+          </div>
+          <div id="cart-item-counter">0</div>
+        </div>
+      </div>
+      <div class="bottomNav">
+        <div class="nav-menu">
+          <ul>
+            <li class="dropdown" onclick="window.location.href='viewall.html'">View All</li>
+            <li class="dropdown" onclick="window.location.href='WomenWestern.html'">Women Western
+              <div class="submenu">
+                <div class="subCat">
+                  <span class="catHeading">Topwear</span>
+                  <span>Dresses</span>
+                  <span>Tops</span>
+                  <span>Sweaters</span>
+                  <span>Jumpsuits</span>
+                </div>
+                <div class="subCat" style="margin-left: 1em;">
+                  <span class="catHeading">Bottomwear</span>
+                  <span>Jeans</span>
+                  <span>Jeggings</span>
+                  <span>Palazzos</span>
+                  <span>Shorts</span>
+                  <span>Skirts</span>
+                </div>
+              </div>
+            </li>
+            <li onclick="window.location.href='Jewellery.html'">Jewellery & Accessories</li>
+            <li onclick="window.location.href='Men.html'">Men</li>
+            <li>Beauty & Health</li>
+            <li>Bath & Body</li>
+            <li>Bags & Footwear</li>
+            <li>Home & Kitchen</li>
+            <li>Kids</li>
+            <li>Electronics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="searchWindow">
+      <div class="searchCloseBtn">
+        <img src="https://i.postimg.cc/Lgdct409/close.png" alt="">
+      </div>
+      <div id="searchWindowDiv">
+        
+      </div>
+    </section>
+  <section class="blurBack"></section>
+    <div id="product_page_title">
+        <p id="product_page_title">All Products</p>
+        <div id="sort-buttons">
+            <select id="select_tag" onchange="handleprice()">
+                <option>Sort</option>
+                <option value="low">Price (Low to high)</option>
+                <option value="high">Price (High to low)</option>
+                <option value="rating">Rating (high to low)</option>
+            </select>
+        </div>
+    </div>
+    <div id="container"></div>
+
+    <!-- Footer -->
+    <div id="footer">
+      <div>
+          <h2>Shop No-Stop on Meesho</h2>
+          <p>Trusted by more than 1 Crore Indians
+           Cash on Delivery | Free Delivery</p>
+           <img src="https://images.meesho.com/images/pow/playstore-icon.webp"; alt="" width="47%">
+           <img style="height:50px ;" src="https://images.meesho.com/images/pow/appstore-icon.webp" alt="" width="47%
+           ">
+      </div>
+      <div>
+          <a href="">Careers</a>
+          <a href="">Become a supplier</a>
+      </div>
+      <div>
+          <a href="">Legal And Policies</a>
+          <a href="">Meesho Tech Blog</a>
+      </div>
+      <div>
+          <a href=""><h3>Contact Us</h3></a>
+          <a href="">query@meesho.com</a>
+      </div>
+      <div>
+          <a href="">Reach out to us</a>
+          <img src="https://meesho.com/assets/facebook.png" alt="">
+          <img src="https://meesho.com/assets/instagram.png" alt="">
+          <img src="https://meesho.com/assets/youtube.png" alt="">
+          <img src="https://meesho.com/assets/linkedin.png" alt="">
+          <img src="https://meesho.com/assets/twitter.png" alt="">
+
+      </div>
+
+  </div> 
+</body>
+</html>
+<script type="text/javascript" src="./script/search.js"></script>
+<script type="text/javascript" src="./script/viewall.js"></script>
