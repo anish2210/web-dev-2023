@@ -1,0 +1,74 @@
+* {
+  font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.app_promo-container {
+  display: flex;
+  justify-content: space-between;
+  border: 1px dotted #f43397;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.app_promo-container .left-section {
+  background-color: whitesmoke;
+  flex: 1;
+  padding: 40px 67px 40px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.app_promo-container .left-section h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.app_promo-container .left-section p {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.app_promo-container .left-section button {
+  display: flex;
+  align-items: center;
+  background-color: #f43397;
+  border: none;
+  border-radius: 5px;
+  max-width: 19em;
+  margin-top: 3em;
+  margin: auto;
+}
+.left-section button:hover {
+  cursor: pointer;
+  background-color: #f43397ad;
+}
+.app_promo-container .left-section button p {
+  margin: 0.7em;
+  font-weight: bold;
+  color: white;
+  font-size: 1.4em;
+}
+
+.app_promo-container .left-section button img {
+  width: 2em;
+  margin-left: 1em;
+}
+
+.app_promo-container .right-section {
+  flex: 1;
+}
+
+.app_promo-container .right-section img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .app_promo-container {
+    flex-direction: column-reverse;
+  }
+}

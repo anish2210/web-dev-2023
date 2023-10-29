@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+}
+.cartSection *{
+  margin: 5px;
+}
+.cartSection{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+button {
+  background-color: white;
+  border: none;
+  padding: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: black;
+}
+.cart-item {
+  display: flex;
+  background-color: whitesmoke;
+  margin-bottom: 0.5em;
+  padding-bottom: 0.8em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+}
+.cart-item img {
+  width: 200px;
+}
+.cart-item-right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  margin-right: 1em;
+  flex: 1;
+}
+.item-name-remove {
+  display: flex;
+  justify-content: space-between;
+}
+.size-quantity {
+  display: flex;
+  justify-content: space-between;
+}
+.item-size-div {
+  display: flex;
+}
+.item-quantity-div {
+  display: flex;
+  align-items: center;
+}
+.quantity-change-div {
+  display: flex;
+}
+.cart-left-section {
+  flex: 1;
+  border-right: 1px solid rgba(0, 0, 0, 0.226);
+  padding-right: 1em;
+  overflow: scroll;
+  height: 450px;
+}
+.product-charges {
+  display: flex;
+  justify-content: space-between;
+}
+.delivery-charges {
+  display: flex;
+  justify-content: space-between;
+}
+.cod-charges {
+  display: flex;
+  justify-content: space-between;
+}
+.discount-div {
+  display: flex;
+  justify-content: space-between;
+}
+.order-total-div {
+  display: flex;
+  justify-content: space-between;
+}
+.cart-right-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
+}
+.item-remove {
+  font-weight: bold;
+  color: #f43397;
+}
+.item-remove:hover {
+  cursor: pointer;
+}
+.cart-continue-button {
+  border: none;
+  padding: 0.7em;
+  font-size: 1.2em;
+  background-color: #f43397;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 100%;
+}
+.cart-continue-button:hover {
+  cursor: pointer;
+  background-color: #f43397ad;
+}
+.warning-message {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* Payment Page CSS */
+
+.cod-div {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3em;
+  padding: 1em;
+  background-color: #e7eeff;
+  justify-content: space-between;
+  margin-top: 2em;
+}
+.cash-img {
+  width: 30px;
+  height: 30px;
+}
+.tick-img {
+  width: 30px;
+  height: 30px;
+}
+.cod-left-div {
+  display: flex;
+  align-items: center;
+}

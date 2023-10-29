@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="https://static.meeshosupply.com/web/meesho-logo-fav.png">
+    <link rel="stylesheet" href="./css/homePage.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <title>SignUp | Meesho</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <section class="navbar">
+      <div class="uppernav">
+        <a href="index.html"><img
+          src="https://cdn.hevodata.com/customer/logo/8c76f62bd88177a78bb6e2810a244446.png"
+          alt="logo"
+          class="logo"
+        /></a>
+        <div class="navSearch">
+          <img
+            src="https://i.postimg.cc/90c6jfMm/search-interface-symbol.png"
+            alt="search"
+            class="NavSearchIcon"
+          />
+          <input
+            type="text"
+            id="keyword"
+            class="searchContainer"
+            placeholder="Try Saree,Kurthi or Seach by Product Code"
+            onkeypress="handleKeyPress(event)"
+          />
+        </div>
+        <div class="navRightSec">
+          <div class="navAppPromo">
+            <img
+              src="https://i.postimg.cc/sXqr2Fz4/smartphone.png"
+              alt="app"
+              class="navAppIcon"
+            />
+            <span id="tagDwn">Download App</span>
+          </div>
+          <span class="navSuplier">Become a Supplier</span>
+          <div class="navProfile" onclick="window.location.href='SignUpPage.html'">
+            <img
+              src="https://i.postimg.cc/wjtLkcVz/user.png"
+              alt="account"
+              class="navAccountIcon"
+            />
+            <span
+              class="SignUpHover"
+              >Profile</span
+            >
+          </div>
+          <div class="navcart" onclick="window.location.href='CartPage.html'">
+            <img
+              src="https://i.postimg.cc/sXBgkwMf/bag.png"
+              alt="cart"
+              class="cartIcon"
+            />
+            <span
+              class="SignUpHover"
+              onclick="window.location.href='CartPage.html'"
+              >Cart</span
+            >
+          </div>
+          <div id="cart-item-counter">0</div>
+        </div>
+      </div>
+      <div class="bottomNav">
+        <div class="nav-menu">
+          <ul>
+            <li class="dropdown" onclick="window.location.href='viewall.html'">View All</li>
+            <li class="dropdown" onclick="window.location.href='WomenWestern.html'">Women Western
+              <div class="submenu">
+                <div class="subCat">
+                  <span class="catHeading">Topwear</span>
+                  <span>Dresses</span>
+                  <span>Tops</span>
+                  <span>Sweaters</span>
+                  <span>Jumpsuits</span>
+                </div>
+                <div class="subCat" style="margin-left: 1em;">
+                  <span class="catHeading">Bottomwear</span>
+                  <span>Jeans</span>
+                  <span>Jeggings</span>
+                  <span>Palazzos</span>
+                  <span>Shorts</span>
+                  <span>Skirts</span>
+                </div>
+              </div>
+            </li>
+            <li onclick="window.location.href='Jewellery.html'">Jewellery & Accessories</li>
+            <li onclick="window.location.href='Men.html'">Men</li>
+            <li>Beauty & Health</li>
+            <li>Bath & Body</li>
+            <li>Bags & Footwear</li>
+            <li>Home & Kitchen</li>
+            <li>Kids</li>
+            <li>Electronics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="searchWindow">
+      <div class="searchCloseBtn">
+        <img src="https://i.postimg.cc/Lgdct409/close.png" alt="">
+      </div>
+      <div id="searchWindowDiv">
+        
+      </div>
+    </section>
+  <section class="blurBack"></section>
+    <!-- Sign up Page -->
+    <div id="RegBox">
+        <div id="SignUpBox">
+            <p style="font-weight: bold">SIGN UP | Become a Member</p>
+            <br>
+            <br>
+            <form  id="form">
+                <!-- <label for="">UserName</label> -->
+                <input id="usernm" type="username" placeholder="Please Enter your Name*" />
+                <br>
+                <!-- <label for="">Email</label> -->
+                <input id="email" type="email" placeholder="Please Enter your E-Mail ID*" />
+                <br>
+                <!-- <label for="">Mobile No</label> -->
+                <input id="mobile" type="text" maxlength="10" placeholder="Please Enter your 10 digit Mobile Number*" />
+                <br>
+                <!-- <label for="">Password</label>  -->
+                <input id="password" type="password" placeholder="Please Set a Password*" />
+                <br>
+        
+                <button id="SignUpBut" type="submit">SIGN UP</button>
+                <button id="SignUpBut" type="submit" onclick="window.location.href='LogInPage.html'">SIGN IN</button>
+              </form>
+        </div>
+               
+    </div>
+    <br>
+    
+    </div>  
+</body>
+</html>
+<script type="text/javascript" src="./script/search.js"></script>
+<script src="./scripts/footer.js"></script>
+
+
+<script>
+    document.getElementById("form").addEventListener("submit", userList);
+    var arr = JSON.parse(localStorage.getItem("user")) || [];
+  
+    function userList(e) {
+        e.preventDefault();
+        console.log("clicked");
+
+        var usernm = document.getElementById("usernm").value;
+        var email = document.getElementById("email").value;
+        var mobile = document.getElementById("mobile").value;
+        var password = document.getElementById("password").value;
+        if (!email || !mobile || !password) {
+            alert("Enter all of the details");
+        }
+        else{
+            var userObj = {
+                usernm: usernm,
+                email: email,
+                mobile: mobile,
+                password: password,
+            };
+            arr.push(userObj);
+            localStorage.setItem("user", JSON.stringify(arr));
+            alert("Welcome Aboard! Let's Get Shopping");
+            window.location.href = "LogInPage.html";
+        }
+    }
+
+    
+</script>
+<!-- <script>
+
+
+    document.querySelector("#form").addEventListener("submit", Login);
+    async function Login(e) {
+      e.preventDefault();
+      let bodyLogin = {
+        name: document.querySelector("#usernm").value,
+        email: document.querySelector("#email").value,
+        mobile: document.querySelector("#mobile").value,
+        password: document.querySelector("#password").value,
+      };
+      bodyLogin = JSON.stringify(bodyLogin);
+      let url = `http://localhost:3000/register`;
+      try {
+        let res = await fetch(url, {
+          method: "POST",
+
+          body: bodyLogin,
+
+          headers: {
+            "content-Type": "application/json",
+          },
+        });
+        let data = await res.json();
+        if (!data.message) {
+          alert("Registration Success");
+          
+          window.open("../LogInPage.html", "_self");
+        } else {
+          alert(data.message);
+        }
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+
+    
+</script> -->
